@@ -240,6 +240,9 @@ elif st.session_state.page == "results":
                 meta_parts.append(str(pub.get("year")))
             if pub.get("journal"):
                 meta_parts.append(pub.get("journal"))
+            if pub.get("doi"):
+                doi_url = f"https://doi.org/{pub['doi']}"
+                meta_parts.append(f'<a href="{doi_url}" target="_blank">{pub["doi"]}</a>')
             
             meta = " • ".join(meta_parts)
 
@@ -253,7 +256,8 @@ elif st.session_state.page == "results":
             st.markdown(
                 f"<div class='meta'>"
                 f"Citations: {pub.get('citations', 0)} | "
-                f"Altmetric: {pub.get('altmetric_score', 0)}"
+                f"Publication: {pub.get('journal', 0)} | "
+                f"Relevance: {round(pub.get('score', 0) * 100, 2)}"
                 f"</div>",
                 unsafe_allow_html=True
             )

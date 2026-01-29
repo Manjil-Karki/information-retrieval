@@ -36,7 +36,8 @@ def search_publications(query, top_n=5, index_path=INDEX_PATH):
             "citations": doc.get("citations", "0"),
             "altmetric_score": doc.get("altmetric_score", "0"),
             "concepts": doc.get("concepts", []),
-            "url": doc.get("publication_url", "")
+            "url": doc.get("publication_url", ""),
+            "doi": doc.get("doi", "")
         }
         for doc_id, score, doc in results
     ]
@@ -59,7 +60,8 @@ def get_document_by_id(doc_id, index_path=INDEX_PATH):
             "citations": doc.get("citations", "0"),
             "altmetric_score": doc.get("altmetric_score", "0"),
             "concepts": doc.get("concepts", []),
-            "url": doc.get("publication_url", "")
+            "url": doc.get("publication_url", ""),
+            "doi": doc.get("doi", "")
         }
     return None
 
