@@ -1,0 +1,6 @@
+venv/
+researchers_publications.json
+notebooks/
+data/
+
+__pycache__/
