@@ -7,3 +7,4 @@ uvicorn==0.40.0
 starlette==0.50.0
 streamlit==1.53.0
 pandas==2.3.3
+bs4==0.0.2

@@ -6,7 +6,7 @@ import re
 API_URL = "http://localhost:8000/search"
 DEFAULT_TOP_K = 100
 
-st.set_page_config(page_title="Academic Search", layout="wide")
+st.set_page_config(page_title=" Coventry Publications Search", layout="wide")
 
 
 st.markdown("""
@@ -129,7 +129,7 @@ if st.session_state.page == "home":
 
     st.markdown("<br><br>", unsafe_allow_html=True)
     st.markdown(
-        "<h1 style='text-align:center;'>Academic Search</h1>",
+        "<h1 style='text-align:center;'>Research Centre for Computational Science and Mathematical Modelling</h1> <h3 style='text-align:center;'>Coventry University</h3>",
         unsafe_allow_html=True
     )
 
@@ -139,7 +139,7 @@ if st.session_state.page == "home":
         with col1:
             query = st.text_input(
                 "Search Query",
-                placeholder="Search papers, authors, or topics",
+                placeholder="Search papers, or topics",
                 key="home_query_input",
                 label_visibility="collapsed"
             )
