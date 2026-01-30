@@ -18,6 +18,7 @@ class TextProcessor:
         except LookupError:
             print("Downloading NLTK punkt tokenizer...")
             nltk.download("punkt", quiet=True)
+            nltk.download("punkt_tab", quiet=True)
         
         try:
             nltk.data.find('corpora/stopwords')

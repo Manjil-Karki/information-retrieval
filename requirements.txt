@@ -8,3 +8,5 @@ starlette==0.50.0
 streamlit==1.53.0
 pandas==2.3.3
 bs4==0.0.2
+httpx==0.28.1
+h2==4.3.0
